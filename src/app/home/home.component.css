@@ -125,6 +125,7 @@
   font-weight: bold;
 }
 .loader {
+  margin-top: 20%;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
   border-top: 16px solid #7b1fa2;
