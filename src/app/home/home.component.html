@@ -1,0 +1,72 @@
+<div class="header">
+  <span class="title">Assignment Portal</span>
+  <span class="spacer"></span>
+  <button class="add-button" routerLink="/create">Add Assignment</button>
+</div>
+<div class="center-loader" *ngIf="loading">
+  <div class="loader"></div>
+</div>
+<content *ngIf="!loading">
+  <h1 class="text-center title">Active assignments</h1>
+  <div class="container">
+    <div class="item" *ngFor="let item of openList">
+      <div class="item-1">{{ item.name }}</div>
+      <div class="item-2">{{ item.subject }}</div>
+      <div class="small-title">
+        <div class="small-div">Start</div>
+        <div class="small-div">End</div>
+      </div>
+      <div class="dates">
+        <div class="item-3">
+          <i class="fa-solid fa-calendar-days"></i>
+          {{ item.startDate | date }}
+        </div>
+        <div class="item-4">
+          <i class="fa-solid fa-calendar-days"></i>
+          {{ item.endDate | date }}
+        </div>
+      </div>
+      <div class="times">
+        <div class="item-3">
+          <i class="fa-regular fa-clock"></i>
+          {{ item.startTime }}
+        </div>
+        <div class="item-4">
+          <i class="fa-regular fa-clock"></i>
+          {{ item.endTime }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1 class="text-center title">Closed assignments</h1>
+  <div class="container">
+    <div class="item" *ngFor="let item of closedList">
+      <div class="item-1">{{ item.name }}</div>
+      <div class="item-2">{{ item.subject }}</div>
+      <div class="small-title">
+        <div class="small-div">Start</div>
+        <div class="small-div">End</div>
+      </div>
+      <div class="dates">
+        <div class="item-3">
+          <i class="fa-solid fa-calendar-days"></i>
+          {{ item.startDate | date }}
+        </div>
+        <div class="item-4">
+          <i class="fa-solid fa-calendar-days"></i>
+          {{ item.endDate | date }}
+        </div>
+      </div>
+      <div class="times">
+        <div class="item-3">
+          <i class="fa-regular fa-clock"></i>
+          {{ item.startTime }}
+        </div>
+        <div class="item-4">
+          <i class="fa-regular fa-clock"></i>
+          {{ item.endTime }}
+        </div>
+      </div>
+    </div>
+  </div>
+</content>

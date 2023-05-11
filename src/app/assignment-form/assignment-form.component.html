@@ -1,0 +1,105 @@
+<div class="header">
+  <span class="title" (click)="changeRoute()">Assignment Portal</span>
+</div>
+<div class="container">
+  <h1>Assignment Form</h1>
+  <form [formGroup]="assignmentForm" (ngSubmit)="formSubmit()">
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name of Assignment"
+          formControlName="name"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Subject of Assignment"
+          formControlName="subject"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="startDate">Start Date</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="date"
+          id="startDate"
+          name="startDate"
+          placeholder="Start Date"
+          formControlName="startDate"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="startDate">End Date</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="date"
+          id="endDate"
+          name="endDate"
+          placeholder="End Date"
+          formControlName="endDate"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="startTime">Start Time</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="time"
+          id="startTime"
+          name="startTime"
+          placeholder="Start Time"
+          formControlName="startTime"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="endTime">End Time</label>
+      </div>
+      <div class="col-75">
+        <input
+          type="time"
+          id="endTime"
+          name="endTime"
+          placeholder="End Time"
+          formControlName="endTime"
+          required
+        />
+      </div>
+    </div>
+    <br />
+    <div class="box">
+      <button class="cancel" routerLink="/">Cancel</button>
+      <button class="submit" type="submit">Submit</button>
+    </div>
+  </form>
+  <br />
+  <div id="snackbar">Assignment created ...</div>
+</div>
